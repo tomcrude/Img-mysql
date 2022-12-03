@@ -9,9 +9,10 @@ app.use(cors())
 app.use(express.static(path.join(__dirname, "./my-images")))
 app.use(logger('dev'));
 
+const port = 4000 || process.env.PORT
 
 app.use(require("./routes.js"))
 
-app.listen(4000 || process.env.PORT, ()=>{
+app.listen(port,"0.0.0.0", ()=>{
     console.log("server open")
 })
