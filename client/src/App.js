@@ -7,7 +7,7 @@ function App() {
   const [list, setlist] = useState([])
   const [change, setchange] = useState(0)
   const [del, setdel] = useState(0)
-  const [image, setimage] = useState("https://img.a.transfermarkt.technology/portrait/big/14132-1606396269.png?lm=1")
+  const [image, setimage] = useState("14-img.png")
 
   useEffect(()=>{
     fetch("/images/get")
@@ -21,7 +21,7 @@ function App() {
       <div className={del === 1 ? "container-fluid" : "inactive"}>
         <div className="ss">
           <button className="x" onClick={()=>{setdel(0)}}>X</button>
-      <img className="s" src={`${image}`} alt={"images"}/>
+      <img className="s" src={`/${image}`} alt={"images"}/>
       </div>
       </div>
 
@@ -78,7 +78,7 @@ function App() {
             <div className="mt-5">
               <div className="del">
             <img onClick={()=>{
-              setimage("/" + stat)
+              setimage(stat)
               setdel(1);
             }} className="imgs" src={`/${stat}`} alt={stat}/>
             </div>
@@ -102,7 +102,7 @@ function App() {
                 <div className="mt-5">
                   <div className="del">
             <img onClick={()=>{
-              setimage("/" + stat)
+              setimage(stat)
               setdel(1);
             }} className="imgs" src={`/${stat}`} alt={stat}/>
             </div>
