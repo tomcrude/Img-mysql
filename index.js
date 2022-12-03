@@ -6,7 +6,7 @@ const logger = require('morgan');
 const app = express()
 
 app.use(cors())
-app.use(express.static(path.join(__dirname, "./my-images")))
+app.use(express.static(path.join(__dirname, "./my-images/")))
 app.use(logger('dev'));
 
 
