@@ -7,7 +7,7 @@ function App() {
   const [list, setlist] = useState([])
   const [change, setchange] = useState(0)
   const [del, setdel] = useState(0)
-  const [image, setimage] = useState("204-img.png")
+  const [image, setimage] = useState("4-img.png")
 
   useEffect(()=>{
     fetch("/images/get")

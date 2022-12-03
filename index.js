@@ -12,7 +12,7 @@ app.use(logger('dev'));
 
 app.use(require("./routes.js"))
 
-const { PORT=3000, LOCAL_ADDRESS='0.0.0.0' } = process.env
+const { PORT=3001, LOCAL_ADDRESS='0.0.0.0' } = process.env
 app.listen(PORT, LOCAL_ADDRESS, () => {
   console.log('server listening at', PORT);
 });
