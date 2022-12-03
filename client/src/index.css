@@ -1,0 +1,132 @@
+.imgs{
+    width: 300px;
+    height: 300x;
+    margin-left: 10px;
+    border: 1px solid black;
+}
+.imgs:hover{
+    cursor: pointer;
+}
+
+.inactive{
+    display: none;
+}
+
+.secret{
+    background: white;
+    border: none;
+    font-size: 2px;
+}
+
+.bb{
+    font-size: 20px;
+}
+.blue{
+    background: rgb(60, 193, 255);
+}
+.blue:hover{
+    background: rgb(97, 199, 247);
+}
+
+.del{
+    display: flex;
+}
+.delete{
+    margin: auto;
+    background: rgb(243, 30, 30);
+}
+.delete:hover{
+    background: rgb(238, 57, 57);
+}
+
+.con{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.s{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    object-fit: contain;
+}
+
+.ss{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-left: -1%;
+    background: rgba(184, 183, 183, 0.329);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    animation: ani 1s;
+}
+.x{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    font-size: 30px;
+    border-radius: 50%;
+    border: none;
+    background: rgb(253, 51, 51);
+    color: rgb(255, 255, 255);
+    align-self: flex-start;
+    margin: 4%;
+    margin-left: 70%;
+}
+.x:hover{
+    background:rgb(207, 32, 32);
+}
+.mg{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.load{
+    animation: loading 2s infinite;
+}
+
+@keyframes ani{
+    0%{
+        background: rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes loading{
+    0%{
+       color: rgb(255, 255, 255);
+    }
+    100%{
+        color: rgb(0, 0, 0);
+     }
+}
+
+@media screen and (max-width: 400px) {
+    .imgs{
+        width: 350px;
+        height: 350px;
+    }
+    .ss{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) and (min-width: 401px) {
+    .imgs{
+        width: 450px;
+        height: 450px;
+    }
+    .ss{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 601px) {
+    .imgs{
+        width: 200px;
+        height: 200px;
+    }
+    
+}
+
