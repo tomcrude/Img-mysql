@@ -7,7 +7,7 @@ function App() {
   const [list, setlist] = useState([])
   const [change, setchange] = useState(0)
   const [del, setdel] = useState(0)
-  const [image, setimage] = useState("14-img.png")
+  const [image, setimage] = useState("my-images/14-img.png")
 
   useEffect(()=>{
     fetch("/images/get")
@@ -80,7 +80,7 @@ function App() {
             <img onClick={()=>{
               setimage(stat)
               setdel(1);
-            }} className="imgs" src={`/${stat}`} alt={stat}/>
+            }} className="imgs" src={`my-images/${stat}`} alt={stat}/>
             </div>
             <div className="col-12 del mt-2">
             <button className=" col-2 delete" onClick={async()=>{
@@ -104,7 +104,7 @@ function App() {
             <img onClick={()=>{
               setimage(stat)
               setdel(1);
-            }} className="imgs" src={`/${stat}`} alt={stat}/>
+            }} className="imgs" src={`my-images/${stat}`} alt={stat}/>
             </div>
             </div>
               )
