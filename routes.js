@@ -28,6 +28,8 @@ const diskstorage = multer.diskStorage({
     }
 })
 
+fs.mkdirSync('./my-images',{recursive:true});
+
 const fileupload =  multer({
     storage: diskstorage
 }).single("image")
