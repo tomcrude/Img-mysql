@@ -7,7 +7,7 @@ function App() {
   const [list, setlist] = useState([])
   const [change, setchange] = useState(0)
   const [del, setdel] = useState(0)
-  const [image, setimage] = useState("14-img.png")
+  const [image, setimage] = useState("https://rsis.ramsar.org/cgi-bin/proxy.cgi?url=http%3A%2F%2Frsis.ramsar.org%3A8080%2Fgeoserver%2Fwms%3FLAYERS%3Dramsar_sdi%253Afeatures_centroid_param_idrvis%26VIEWPARAMS%3Didrvis%253A3314138%26TRANSPARENT%3Dtrue%26VISIBILITY%3Dtrue%26ISBASELAYER%3Dfalse%26SERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetMap%26STYLES%3D%26FORMAT%3Dimage%252Fpng%26SRS%3DEPSG%253A3857%26BBOX%3D-7044436.5257812%2C-1526294.5805859%2C-7005300.7673047%2C-1487158.8221094%26WIDTH%3D256%26HEIGHT%3D256")
 
   useEffect(()=>{
     fetch("/images/get")
@@ -18,7 +18,12 @@ function App() {
   return (
     <div>
       
-      
+      <div className={del === 1 ? "container-fluid" : "inactive"}>
+        <div className="ss">
+          <button className="x" onClick={()=>{setdel(0)}}>X</button>
+      <img className="s" src={`${image}`} alt={"images"}/>
+      </div>
+      </div>
 
       <div className="container-fluid">
       <div className="row mg">
@@ -73,7 +78,7 @@ function App() {
             <div className="mt-5">
               <div className="del">
             <img onClick={()=>{
-              setimage(stat)
+              setimage(`/${stat}`)
               setdel(1);
             }} className="imgs" src={`/${stat}`} alt={stat}/>
             </div>
@@ -97,7 +102,7 @@ function App() {
                 <div className="mt-5">
                   <div className="del">
             <img onClick={()=>{
-              setimage(stat)
+              setimage(`/${stat}`)
               setdel(1);
             }} className="imgs" src={`/${stat}`} alt={stat}/>
             </div>
