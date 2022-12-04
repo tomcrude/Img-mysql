@@ -18,12 +18,7 @@ function App() {
   return (
     <div>
       
-      <div className={del === 1 ? "container-fluid" : "inactive"}>
-        <div className="ss">
-          <button className="x" onClick={()=>{setdel(0)}}>X</button>
-      <img className="s" src={`/${image}`} alt={"images"}/>
-      </div>
-      </div>
+      
 
       <div className="container-fluid">
       <div className="row mg">
